@@ -1,6 +1,8 @@
 ---
 - hosts: all
   become: true 
+  roles: 
+  - role: anxs.postgresql
   tasks:
   - name: Ensure NTP (for time synchronization) is installed.
     yum: name=ntp state=present
